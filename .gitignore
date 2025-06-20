@@ -1,4 +1,5 @@
 sign_language_detector/data
+ideas/
 sign_language_detector/saved_models
 sign_language_detector/processed_data
 sign_language_detector/venv
