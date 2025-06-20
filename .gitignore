@@ -1,0 +1,10 @@
+sign_language_detector/data
+sign_language_detector/saved_models
+sign_language_detector/processed_data
+sign_language_detector/venv
+sign_language_detector/notebooks
+#files
+**/_pycache_/
+*.vscode/
+*.env
+**/*.csv
