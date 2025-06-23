@@ -1,0 +1,66 @@
+1)/////////////////////////////////////////////////////////////////
+powerful tools that visualize how a model learns and adjusts weights during training. These tools can help you understand the training process, weight updates, loss changes, and even the decision boundaries of a model.
+we can see inner details of modeloptimization like the adjusting of weigth and loss fn using tools.
+ex=> TensorBoard (Official TensorFlow Tool)
+🧠 What it does:
+Visualizes loss and accuracy over time
+
+Displays weights, gradients, and activations
+
+Shows graphs of your model architecture
+
+Allows embedding visualizations (e.g., t-SNE)
+
+📦 How to use it:
+python
+Copy
+Edit
+from tensorflow.keras.callbacks import TensorBoard
+
+tensorboard_callback = TensorBoard(log_dir="./logs")
+
+model.fit(X_train, y_train, epochs=10, callbacks=[tensorboard_callback])
+Then launch it in terminal:
+
+bash
+Copy
+Edit
+tensorboard --logdir=./logs
+And open in your browser: http://localhost:6006
+
+✅ 2. Netron
+🧠 What it does:
+Visualizes model architecture and weights
+
+Works for models from TensorFlow, PyTorch, ONNX, Keras, etc.
+
+🔗 Website: https://netron.app
+Just drag and drop your model file (.h5, .pb, etc.) to see the full structure.
+
+✅ 3. Weights & Biases (WandB)
+🧠 What it does:
+Tracks training metrics like loss/accuracy
+
+Logs weight updates and gradients
+
+Provides nice live graphs and dashboards
+
+Collaborative and cloud-based
+
+📦 Setup:
+bash
+Copy
+Edit
+pip install wandb
+Use in code:
+
+python
+Copy
+Edit
+import wandb
+from wandb.keras import WandbCallback
+
+wandb.init(project="my_project")
+model.fit(X_train, y_train, callbacks=[WandbCallback()])
+🔗 https://wandb.ai
+2)/////////////////////////////////////////////////////////////////////////
